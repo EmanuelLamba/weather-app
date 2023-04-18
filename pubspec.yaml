@@ -9,9 +9,10 @@ environment:
 dependencies:
   cloud_firestore: ^4.5.0
   firebase_auth: ^4.4.0
+  firebase_core: ^2.9.0
   flutter:
     sdk: flutter
-  go_router: ^6.5.5
+  go_router: ^6.5.7
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -24,5 +25,8 @@ flutter:
   fonts:
     - family: OpenSans
       fonts:
-        - asset: fonts/OpenSans-Regular.ttf
-        - asset: fonts/OpenSans-Light.ttf
+        - asset: assets/fonts/OpenSans-Regular.ttf
+        - asset: assets/fonts/OpenSans-Light.ttf
+  
+  assets:
+    - assets/images/google_icon.png
