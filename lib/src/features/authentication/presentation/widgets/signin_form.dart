@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../coomon_widgets/custom_button.dart';
-import '../../../coomon_widgets/custom_delimiter.dart';
-import '../../../coomon_widgets/custom_form_field.dart';
-import '../../../utils/colors.dart';
-import '../../../utils/sizes.dart';
+import '../../../../coomon_widgets/custom_button.dart';
+import '../../../../coomon_widgets/custom_delimiter.dart';
+import '../../../../coomon_widgets/custom_form_field.dart';
+import '../../../../utils/colors.dart' as colors;
+import '../../../../utils/sizes.dart' as sizes;
 import '../views/signup_view.dart';
 
 class SignInForm extends StatelessWidget {
@@ -25,29 +25,48 @@ class SignInForm extends StatelessWidget {
             hintText: 'Enter your password...',
           ),
           const CustomDelimiter(),
-          const CustomButton(
+          CustomButton(
             text: 'Sign in',
+            onPressed: () {},
           ),
-          const CustomDelimiter(size: 0),
+          const CustomDelimiter(
+            size: -8,
+          ),
+          CustomButton(
+            text: 'Recover your password',
+            onPressed: () {},
+            isTextButton: true,
+          ),
+          const CustomDelimiter(
+            size: -16,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               const Text(
                 "Don't have an account?",
-                style: TextStyle(fontSize: defaultFont),
+                style: TextStyle(fontSize: sizes.defaultFont),
               ),
-              TextButton(
+              CustomButton(
+                text: 'Create one',
                 onPressed: () => Navigator.push(context,
                     MaterialPageRoute(builder: (context) => SignUpView())),
-                child: const Text(
-                  'Create one',
-                  style: TextStyle(
-                    fontSize: defaultFont,
-                    color: detailColor,
-                  ),
-                ),
-              )
+                isTextButton: true,
+              ),
             ],
+          ),
+          const CustomDelimiter(size: -8),
+          CustomButton(
+            assetImage: Container(
+              color: colors.primaryColor900,
+              width: 30,
+              child: Image.asset(
+                'assets/images/google_icon.png',
+                scale: 0.8,
+              ),
+            ),
+            text: 'Sign in with Google',
+            onPressed: () {},
           ),
         ],
       ),

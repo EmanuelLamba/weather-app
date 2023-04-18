@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../coomon_widgets/custom_button.dart';
-import '../../../coomon_widgets/custom_delimiter.dart';
-import '../../../coomon_widgets/custom_form_field.dart';
-import '../../../utils/colors.dart';
-import '../../../utils/sizes.dart';
+import '../../../../coomon_widgets/custom_button.dart';
+import '../../../../coomon_widgets/custom_delimiter.dart';
+import '../../../../coomon_widgets/custom_form_field.dart';
+import '../../../../utils/sizes.dart' as sizes;
 
 class SignUpForm extends StatelessWidget {
   const SignUpForm({
@@ -27,29 +26,25 @@ class SignUpForm extends StatelessWidget {
             hintText: 'Reenter your password...',
           ),
           const CustomDelimiter(),
-          const CustomButton(
+          CustomButton(
             text: 'Sign up',
+            onPressed: () {},
           ),
-          const CustomDelimiter(size: 0),
+          const CustomDelimiter(size: -8),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               const Text(
                 'Already have an account?',
-                style: TextStyle(fontSize: defaultFont),
+                style: TextStyle(fontSize: sizes.defaultFont),
               ),
-              TextButton(
+              CustomButton(
+                text: 'Sign in',
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                child: const Text(
-                  'Sign in',
-                  style: TextStyle(
-                    fontSize: defaultFont,
-                    color: detailColor,
-                  ),
-                ),
-              )
+                isTextButton: true,
+              ),
             ],
           ),
         ],

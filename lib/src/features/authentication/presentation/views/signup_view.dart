@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../coomon_widgets/app_background.dart';
-import '../../../coomon_widgets/custom_delimiter.dart';
-import '../../../utils/sizes.dart';
+import '../../../../coomon_widgets/custom_delimiter.dart';
+import '../../../../utils/sizes.dart' as sizes;
 
 import '../widgets/signup_form.dart';
 
@@ -10,9 +9,9 @@ class SignUpView extends StatelessWidget {
 
   @override
   Widget build(final BuildContext context) {
-    return AppBackground(
-      child: Container(
-        padding: const EdgeInsets.all(defaultSize),
+    return Scaffold(
+      body: Container(
+        padding: const EdgeInsets.all(sizes.defaultSize),
         child: Column(
           children: <Widget>[
             SizedBox(
@@ -20,9 +19,9 @@ class SignUpView extends StatelessWidget {
             ),
             const Text(
               'Sign Up',
-              style: TextStyle(fontSize: bigFont),
+              style: TextStyle(fontSize: sizes.bigFont),
             ),
-            const CustomDelimiter(size: 26),
+            const CustomDelimiter(size: sizes.defaultSize),
             const SignUpForm(),
           ],
         ),

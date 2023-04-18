@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class WeidgetDecorator extends StatelessWidget {
-  const WeidgetDecorator({
+class WidgetDecorator extends StatelessWidget {
+  const WidgetDecorator({
     required this.child,
     this.borderRadius = 0,
     super.key,

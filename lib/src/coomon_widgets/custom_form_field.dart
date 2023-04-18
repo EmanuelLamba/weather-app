@@ -7,7 +7,7 @@ class CustomFormField extends StatelessWidget {
 
   @override
   Widget build(final BuildContext context) {
-    return WeidgetDecorator(
+    return WidgetDecorator(
       borderRadius: 50,
       child: TextFormField(
         decoration: InputDecoration(

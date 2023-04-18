@@ -9,3 +9,7 @@ const double defaultDelimiter = 30;
 
 //Widget
 const double defaultSize = 16;
+
+//Device Sizes
+double? deviceWidth;
+double? deviceHeight;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../utils/sizes.dart';
+import '../utils/sizes.dart' as sizes;
 
 class CustomDelimiter extends StatelessWidget {
   const CustomDelimiter({super.key, this.size = 10});
@@ -10,7 +10,8 @@ class CustomDelimiter extends StatelessWidget {
   @override
   Widget build(final BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height / defaultDelimiter + size,
+      height:
+          MediaQuery.of(context).size.height / sizes.defaultDelimiter + size,
     );
   }
 }
