@@ -10,6 +10,7 @@ class SignInView extends StatelessWidget {
   @override
   Widget build(final BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         padding: const EdgeInsets.all(sizes.defaultSize),
         child: Column(
