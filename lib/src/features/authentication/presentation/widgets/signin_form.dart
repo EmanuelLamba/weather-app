@@ -58,11 +58,13 @@ class SignInForm extends StatelessWidget {
           const CustomDelimiter(size: -8),
           CustomButton(
             assetImage: Container(
-              color: colors.primaryColor900,
-              width: 30,
+              decoration: const BoxDecoration(
+                color: colors.primaryColor900,
+                borderRadius: BorderRadius.all(Radius.circular(3)),
+              ),
+              width: 32,
               child: Image.asset(
                 'assets/images/google_icon.png',
-                scale: 0.8,
               ),
             ),
             text: 'Sign in with Google',

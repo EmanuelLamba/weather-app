@@ -18,7 +18,7 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(final BuildContext context) {
-    const double insetSize = 3;
+    const double insetSize = 2;
 
     return !isTextButton
         ? ElevatedButton(
