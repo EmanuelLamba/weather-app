@@ -1,23 +1,32 @@
 import 'package:flutter/material.dart';
 
-import '../utils/colors.dart';
+import '../common_widgets/decorated_input_border.dart';
+import '../utils/colors.dart' as colors;
 import '../utils/sizes.dart';
 
 ThemeData lightTheme(final BuildContext context) {
   return ThemeData(fontFamily: 'OpenSans').copyWith(
-    primaryColor: primaryColor,
-    scaffoldBackgroundColor: Colors.white,
-    inputDecorationTheme: const InputDecorationTheme(
-      hintStyle: TextStyle(color: secondaryColor),
+    inputDecorationTheme: InputDecorationTheme(
+      hintStyle: const TextStyle(color: colors.secondaryColor),
       filled: true,
-      fillColor: primaryColor900,
-      contentPadding: EdgeInsets.all(defaultSize),
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.all(
-          Radius.circular(50),
+      fillColor: colors.primaryColor900,
+      contentPadding: const EdgeInsets.all(defaultSize),
+      errorStyle: const TextStyle(fontSize: 13, color: colors.errorColor),
+      border: DecoratedInputBorder(
+        shadow: const BoxShadow(
+          color: Color(0xFFD0D0D0),
+          blurRadius: 15,
+          offset: Offset(0, 4),
         ),
-        borderSide: BorderSide.none,
+        child: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(50),
+          ),
+          borderSide: BorderSide.none,
+        ),
       ),
     ),
+    primaryColor: colors.primaryColor,
+    scaffoldBackgroundColor: colors.primaryColor,
   );
 }
