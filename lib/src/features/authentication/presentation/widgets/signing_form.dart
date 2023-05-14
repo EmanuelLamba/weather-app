@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../common_widgets/custom_button.dart';
-import '../../../../common_widgets/custom_form_field.dart';
 import '../../../../utils/colors.dart' as colors;
 import '../../../../utils/sizes.dart' as sizes;
 import '../../domain/auth_controller.dart';
 import '../../domain/form_controller.dart';
+import 'custom_form_field.dart';
 
 class SigningForm extends StatelessWidget {
   const SigningForm({

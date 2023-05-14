@@ -2,8 +2,8 @@
 // ignore_for_file: avoid_dynamic_calls,
 
 import 'package:flutter/material.dart';
-import '../utils/colors.dart' as colors;
-import 'decorated_input_border.dart';
+import '../../../../common_widgets/decorated_input_border.dart';
+import '../../../../utils/colors.dart' as colors;
 
 class CustomFormField extends StatefulWidget {
   const CustomFormField({
