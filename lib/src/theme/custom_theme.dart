@@ -14,7 +14,7 @@ ThemeData lightTheme(final BuildContext context) {
       errorStyle: const TextStyle(fontSize: 13, color: colors.errorColor),
       border: DecoratedInputBorder(
         shadow: const BoxShadow(
-          color: Color(0xFFD0D0D0),
+          color: colors.shadowColor,
           blurRadius: 15,
           offset: Offset(0, 4),
         ),
