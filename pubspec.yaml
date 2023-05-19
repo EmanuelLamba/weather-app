@@ -12,6 +12,7 @@ dependencies:
   firebase_core: ^2.9.0
   flutter:
     sdk: flutter
+  flutter_svg: ^2.0.5
   go_router: ^7.0.0
   google_sign_in: ^6.1.0
   multiple_result: ^4.0.0
@@ -34,3 +35,4 @@ flutter:
   
   assets:
     - assets/images/google_icon.png
+    - assets/images/weather_icons/
